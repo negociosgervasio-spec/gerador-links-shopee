@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Links Shopee | Grátis & Rápido</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <header class="bg-orange-600 py-10 shadow-lg text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-extrabold uppercase tracking-tighter">
+          Gerador Shopee Pro
+        </h1>
+        <p class="text-orange-100 mt-2 text-lg">
+          Transforme links comuns em links de afiliado em segundos.
+        </p>
+        <div class="mt-6">
+          <a
+            href="#tutorial"
+            class="text-sm bg-orange-500 hover:bg-orange-400 py-2 px-4 rounded-full transition-all"
+            >Ver passo a passo ↓</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12 max-w-4xl">
+      <section
+        class="bg-white rounded-2xl shadow-xl p-8 mb-16 border border-gray-100 relative -mt-20 z-10"
+      >
+        <div class="mb-6">
+          <label
+            for="shopee-link"
+            class="block text-sm font-bold text-gray-700 mb-3 uppercase tracking-wide"
+            >Cole o link do produto abaixo:</label
+          >
+          <input
+            type="text"
+            id="shopee-link"
+            placeholder="https://shopee.com.br/produto-exemplo..."
+            class="w-full p-4 bg-gray-50 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-orange-500 transition-all text-lg"
+          />
+        </div>
+
+        <button
+          onclick="gerarLink()"
+          class="w-full bg-orange-600 hover:bg-orange-700 text-white font-black py-5 rounded-xl transition-transform active:scale-95 shadow-lg text-xl uppercase tracking-widest"
+        >
+          Gerar Link de Afiliado
+        </button>
+
+        <div id="resultado-container" class="mt-8 hidden animate-bounce-in">
+          <div class="p-4 bg-green-50 border-2 border-green-200 rounded-xl">
+            <label class="block text-xs font-bold text-green-700 mb-2 uppercase"
+              >Seu link de afiliado está pronto:</label
+            >
+            <div class="flex flex-col md:flex-row gap-3">
+              <input
+                type="text"
+                id="link-gerado"
+                readonly
+                class="flex-1 p-3 bg-white border border-green-300 rounded-lg text-green-900 font-mono text-sm overflow-ellipsis"
+              />
+              <button
+                onclick="copiarLink()"
+                class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-bold uppercase text-sm whitespace-nowrap"
+              >
+                Copiar Link
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tutorial" class="mb-16">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-10">
+          Como usar a ferramenta (Passo a Passo)
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center"
+          >
+            <div
+              class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4"
+            >
+              1
+            </div>
+            <h3 class="font-bold mb-2">Busque o Produto</h3>
+            <p class="text-gray-500 text-sm">
+              Abra o app ou site da Shopee, escolha o produto que deseja
+              divulgar e clique no ícone de <strong>compartilhar</strong>.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center text-center"
+          >
+            <div
+              class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4"
+            >
+              2
+            </div>
+            <h3 class="font-bold mb-2">Copie o Link</h3>
+            <p class="text-gray-500 text-sm">
+              Selecione a opção <strong>"Copiar Link"</strong>. O link deve
+              começar com <em>https://shopee.com.br/...</em> ou
+              <em>https://s.shopee...</em>
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center"
+          >
+            <div
+              class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4"
+            >
+              3
+            </div>
+            <h3 class="font-bold mb-2">Gere e Divulgue</h3>
+            <p class="text-gray-500 text-sm">
+              Cole o link no campo acima, clique em <strong>Gerar</strong> e
+              pronto! Agora é só copiar e postar nas suas redes sociais.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="bg-orange-50 rounded-3xl border-2 border-dashed border-orange-300 p-10 text-center max-w-2xl mx-auto"
+      >
+        <h2 class="text-2xl font-black text-gray-800 mb-2">
+          Apoie este projeto! ☕
+        </h2>
+        <p class="text-gray-600 mb-8">
+          Esta ferramenta é gratuita e sem anúncios. Se ela te ajudou a ganhar
+          comissões, considere enviar um café via PIX.
+        </p>
+
+        <div class="flex flex-col items-center">
+          <div
+            class="bg-white p-4 rounded-2xl shadow-md mb-6 border border-orange-100"
+          >
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=11965824246"
+              alt="QR Code PIX"
+              class="w-48 h-48"
+            />
+            <p
+              class="mt-3 text-[10px] text-gray-400 uppercase tracking-widest font-bold"
+            >
+              Escaneie para doar
+            </p>
+          </div>
+
+          <div class="w-full max-w-xs">
+            <p
+              class="text-xs text-gray-500 mb-2 uppercase font-bold tracking-tight"
+            >
+              Minha Chave PIX (Celular):
+            </p>
+            <div
+              class="bg-white border-2 border-orange-200 rounded-full py-3 px-6 flex items-center justify-center gap-3 shadow-sm"
+            >
+              <span class="font-mono font-bold text-orange-700"
+                >11 96582-4246</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="text-center py-12 text-gray-400 text-xs border-t border-gray-100 mt-10"
+    >
+      <p>© 2026 - Ferramenta Gratuita para Afiliados</p>
+      <p class="mt-1 italic underline">
+        Desenvolvido com foco em alta conversão
+      </p>
+    </footer>
+
+    <script>
+      function gerarLink() {
+        const linkOriginal = document.getElementById("shopee-link").value;
+        const resultadoContainer = document.getElementById(
+          "resultado-container",
+        );
+        const linkGeradoInput = document.getElementById("link-gerado");
+
+        if (linkOriginal.trim() === "" || !linkOriginal.includes("shopee")) {
+          alert("Por favor, insira um link válido da Shopee.");
+          return;
+        }
+
+        // Lógica de manipulação de link (Simulação)
+        // Aqui você pode integrar a API oficial ou sua estrutura de sub_id
+        const prefixoAfiliado = "https://shope.ee/as/p/"; // Exemplo de estrutura
+        const linkLimpo = linkOriginal.split("?")[0]; // Remove parâmetros originais
+        const linkFinal = linkLimpo + "?track=afiliado_pro";
+
+        linkGeradoInput.value = linkFinal;
+        resultadoContainer.classList.remove("hidden");
+
+        // Scroll suave para o resultado em telas pequenas
+        window.scrollTo({
+          top: resultadoContainer.offsetTop + 100,
+          behavior: "smooth",
+        });
+      }
+
+      function copiarLink() {
+        const copyText = document.getElementById("link-gerado");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+
+        const btn = event.target;
+        const originalText = btn.innerText;
+        btn.innerText = "COPIADO!";
+        btn.classList.replace("bg-green-600", "bg-gray-800");
+
+        setTimeout(() => {
+          btn.innerText = originalText;
+          btn.classList.replace("bg-gray-800", "bg-green-600");
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
